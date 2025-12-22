@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lab Management System</title>
+<link rel="stylesheet" href="style_2.css">
+</head>
+
+<body>
+    <!-- LOADING SCREEN -->
+    <div id="loader">
+        <h1>Loading...</h1>
+        <div class="progress-box">
+            <div class="progress-bar" id="bar"></div>
+        </div>
+        <p id="percent">0%</p>
+    </div>
+
+    <div class="container">
+        <!-- left side -->
+        <div class="left">
+            <div id="tittle">
+                <h2>Student Registration</h2>
+            </div>
+        
+            <form id="studentForm">
+            
+                <div class="form-row">
+                    <label for="user_name">Name :</label>
+                    <input type="text" id="user_name" placeholder="Enter your name" autocomplete="off" required>
+                </div>
+            
+                <div class="form-row">
+                    <label for="age">Age :</label>
+                    <input type="number" id="age" placeholder="Enter your age" autocomplete="off" required>
+                </div>
+            
+                <div class="form-row">
+                    <label for="edu">Education :</label>
+                    <input type="text" id="edu" placeholder="Enter your education" autocomplete="off" required>
+                </div>
+            
+                <div class="form-row">
+                    <label for="pic">Photo URL :</label>
+                    <input type="url" id="pic" placeholder="Enter photo URL" autocomplete="off" required>
+                </div>
+            
+                <div class="form-row">
+                    <label for="start">Start Date :</label>
+                    <input type="date" id="start" autocomplete="off" required>
+                </div>
+            
+                <div class="form-row">
+                    <label for="end">End Date :</label>
+                    <input type="date" id="end" autocomplete="off" required>
+                </div>
+            
+                <button type="submit">Add New Student</button>
+            
+            </form>
+
+            <div class="stats-container">
+                <div class="stats" id="stats">
+                    <h3>Statistics</h3>
+                    <p>Active Students : <span id="count">0</span></p>
+                    <p>Monthly Revenue : ₹<span id="revenue">0</span></p>
+                    <p>Available Seats : <span id="seats">200</span></p>
+                </div>
+                <div class="stats" id="stats">
+                    <h3>Monthly Basic Plan</h3>
+                    <p> plan <span id="count">0</span></p>
+                    <p>Monthly Revenue: ₹<span id="revenue">0</span></p>
+                    <p>Available Seats: <span id="seats">130</span></p>
+                </div>
+                <div class="stats" id="stats">
+                    <h3>Monthly Premium Plan</h3>
+                    <p> plan <span id="count">0</span></p>
+                    <p>Monthly Revenue: ₹<span id="revenue">0</span></p>
+                    <p>Available Seats: <span id="seats">70</span></p>
+                </div>
+                <div class="stats" id="stats">
+                    <h3>Premium Plan Feature </h3>
+                    
+                </div>
+            </div>
+            
+        </div>
+    
+        <!-- RIGHT -->
+        <div class="right">
+            <div class="right-top">
+                <h2>Students</h2>
+                <input type="text" placeholder="search students" id="search">
+            </div>
+            <div class="cards" id="cards"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

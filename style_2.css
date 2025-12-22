@@ -1,0 +1,254 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0f172a;
+    color: #f1f5f9;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+
+/* LEFT SIDE */
+.left {
+    width: 50%;
+    padding: 20px;
+    overflow-y: auto;
+    background: #1e293b;
+    border-right: 2px solid #334155;
+}
+
+#tittle {
+    position: relative;
+    width: 40%;
+    padding: 2px 10px;
+    border-radius: 10px;
+    background: #0f172a;
+    overflow: hidden;
+    animation: glow 4s infinite alternate-reverse;
+}
+
+/* text */
+#tittle h2 {
+    color: #ccd5e3;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 1px #faf147,
+                    0 0 1px #faf147,
+                    0 0 1px #faf147;
+    }
+    50% {
+        box-shadow: 0 0 3px #faf147,
+                    0 0 6px #faf147,
+                    0 0 9px #faf147;
+    }
+    100%{
+        box-shadow: 0 0 5px #ee820e,
+                    0 0 10px #ee820e,
+                    0 0 15px #ee820e;
+    }
+}
+
+#studentForm {
+    width: 80%;
+    margin:30px;
+    padding-top: 15px;
+    margin-left: 40px;
+    
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    
+}
+
+.form-row label {
+    width: 30%;          /* left side */
+    font-weight: 500;
+}
+
+.form-row input {
+    height: 40px;
+    width: 70%;          /* right side */
+    padding: 12px;
+    background-color: #1e293b ;
+    border-radius: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.form-row input:focus {
+    border-color: #2563eb;
+    outline: none;
+    box-shadow: 0 0 6px rgba(37, 99, 235, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: 2px solid rgb(4, 4, 4);
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+.stats-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.stats {
+    margin-top: 30px;
+    padding: 15px;
+    background: #334155;
+    border-radius: 10px;
+    border-left: 4px solid #3b82f6;
+    color: #f1f5f9;
+    width: 90%;
+}
+
+/* RIGHT SIDE */
+.right {
+    width: 50%;
+    padding: 20px;
+    overflow-y: auto;
+    background: #1e293b;
+}
+.right-top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.right-top h2{
+    color: #ccd5e3;
+}
+.right-top input{
+    height: 32px ;
+    width: 200px;
+    padding: 10px;
+    font-size: medium;
+    border: 2px solid rgba(30, 30, 227, 0.854);
+    border-radius: 10px;
+    background-color: #0f172a;
+    color: #ccd5e3;
+    padding-left: 6%;
+}
+.right-top input:focus{
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 2px 2px 6px rgba(233, 44, 6, 0.891);
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.card-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #3b82f6;
+}
+
+.card-footer {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #b9cae2;
+}
+
+.remove-btn {
+    margin-top: 10px;
+    background: #ef4444;
+    color: white;
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom:2px;
+}
+
+.remove-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* LOADER */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #111827;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.progress-box {
+    width: 300px;
+    height: 20px;
+    background: #374151;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #3b82f6;
+    transition: width 0.04s linear;
+}
+
+/* HIDE MAIN CONTENT INITIALLY */
+.container {
+    display: none;
+}
